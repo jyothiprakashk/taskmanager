@@ -1,4 +1,4 @@
-export const APP_URL = process.env.REACT_APP_URL;
+export const APP_URL = "https://stage.api.sloovi.com/";
 export const PATH = {
   Login: "login",
   User: "user",
