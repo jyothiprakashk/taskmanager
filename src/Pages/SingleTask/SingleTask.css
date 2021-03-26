@@ -1,0 +1,22 @@
+.single-task ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  /* width: 64%; */
+  margin-top: 5%;
+  font-size: 18px;
+  font-family: Google-sans;
+}
+.single-task {
+  margin-top: 20px;
+}
+.single-task img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.single-task .back {
+  font-size: 20px;
+  font-family: Google-sansB;
+  cursor: pointer;
+}

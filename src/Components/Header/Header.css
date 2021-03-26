@@ -1,0 +1,38 @@
+.header {
+  background-color: #0f918d;
+  color: #fff;
+  padding: 7px;
+  font-family: Google-sansB;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  width: 111px;
+  height: 48px;
+  border-radius: 33px;
+}
+.logout_popup .MuiTypography-h6 {
+  font-family: Google-sansB !important;
+}
+.logout_popup .MuiDialogContentText-root {
+  font-family: Google-sans;
+  color: #000;
+}
+.logout_popup .MuiDialogActions-root {
+  display: flex;
+  justify-content: space-around;
+}
+.logout_popup .MuiDialog-paperScrollPaper {
+  border-radius: 25px;
+}
+.logout_popup .MuiButton-root {
+  color: #1e90ff !important;
+  text-transform: none;
+  font-size: 17px;
+  font-family: Google-sansB;
+}
+.MuiDialog-paper {
+  margin: 0px !important;
+}
