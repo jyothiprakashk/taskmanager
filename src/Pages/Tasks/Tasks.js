@@ -8,7 +8,7 @@ import { Button } from "@material-ui/core";
 import GetTasksComponent from "../GetTasks/GetTasks";
 var moment = require("moment");
 
-export default function Task() {
+export default function Task(props) {
   const [Task, SetTask] = useState({
     description: "",
     task_date: "",
@@ -35,7 +35,9 @@ export default function Task() {
       StateClear();
     }
   };
-
+  useEffect(() => {
+    dispatch(GetTask());
+  }, []);
   const StateClear = () => {
     SetTask({ description: "", task_date: "", task_time: "", edit: false });
   };
@@ -115,6 +117,7 @@ export default function Task() {
         userdata={user_data}
         Edit={Edit}
         delete_status={delete_status}
+        props={props}
       />
     </div>
   );

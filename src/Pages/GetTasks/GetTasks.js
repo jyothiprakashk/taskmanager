@@ -6,8 +6,7 @@ import Editicon from "../../Images/edit.svg";
 import deleteimage from "../../Images/delete-button.svg";
 import DeleteComponent from "../../Components/Logout";
 import { ActionType } from "../../Constants";
-
-const GetTasks = ({ userdata, Edit }) => {
+const GetTasks = ({ userdata, Edit, props }) => {
   const [deleteid, setDeleteId] = useState("");
   const [redirect, setRedirect] = useState(false);
   const dispatch = useDispatch();
@@ -27,7 +26,9 @@ const GetTasks = ({ userdata, Edit }) => {
   };
   const GettingSingleTask = (id) => {
     dispatch({ type: ActionType.SINGLE_KEY, payload: id });
-    window.location.assign("/tasks");
+    // window.location.assign("/tasks");
+    console.log(props);
+    props.history.push("/tasks");
   };
   return (
     <div className="user-data">

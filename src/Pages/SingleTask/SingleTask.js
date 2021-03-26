@@ -22,14 +22,14 @@ const SingleTaskComp = (props) => {
         <img src={Back} />
         <div className="back">Back</div>
       </div>
-      {Object.keys(single_task) === undefined ? (
-        "Something went wrong"
-      ) : Object.keys(single_task).length > 0 ? (
-        <ul>
-          <li className="desc">{single_task.task_msg}</li>
-          <li>{single_task.task_date}</li>
-          <li>{single_task.task_time}</li>
-        </ul>
+      {single_task && single_task.length > 0 ? (
+        single_task.map((data, key) => (
+          <ul key={key}>
+            <li className="desc">{data.task_msg}</li>
+            <li>{data.task_date}</li>
+            <li>{data.task_time}</li>
+          </ul>
+        ))
       ) : (
         <div className="no-task">Something went wrong</div>
       )}

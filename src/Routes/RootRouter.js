@@ -53,12 +53,8 @@ function RootRouter() {
   const { token } = useSelector(({ reducer }) => reducer);
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Switch>
-          <Router history={history}>
-            {token ? <HomeRoutes /> : <AuthRoutes />}
-          </Router>
-        </Switch>
+      <Router history={history}>
+        {token ? <HomeRoutes /> : <AuthRoutes />}
       </Router>
     </ThemeProvider>
   );

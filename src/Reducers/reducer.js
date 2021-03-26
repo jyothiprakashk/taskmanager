@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
     case ActionType.DELETE_S:
       return { ...state, delete_status: action.payload };
     case ActionType.SINGLE_TASK:
-      return { ...state, single_task: action.payload };
+      return { ...state, single_task: [action.payload] };
     case ActionType.SINGLE_KEY:
       return { ...state, single_key: action.payload };
     case ActionType.LOGOUT:
